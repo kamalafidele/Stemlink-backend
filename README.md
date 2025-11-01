@@ -1,9 +1,9 @@
 # StemLink
 
-Minimal, production-ready Node.js backend for the StemLink project.
+This project aims to empower young girls in Rwanda to explore and pursue careers in STEM by connecting them with inspiring mentors and interactive learning opportunities. By fostering confidence, awareness, and practical skills—especially among girls from underserved communities—the platform seeks to bridge the gender gap in STEM and build a more inclusive, innovative ecosystem that nurtures Rwanda’s future leaders and innovators.
 
 ## Overview
-StemLink is a Node.js API server managed with npm. The project exposes a REST API and ships automatically generated Swagger/OpenAPI documentation.
+StemLink Backend is a Node.js API server managed with npm. The project exposes a REST API and ships automatically generated Swagger/OpenAPI documentation.
 
 ## Prerequisites
 - Node.js (18+ recommended)
