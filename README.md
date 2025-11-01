@@ -36,7 +36,7 @@ Note: Check `package.json` for actual script implementations and adjust commands
 ## Generating API documentation
 To build the Swagger/OpenAPI docs for the API:
 ```
-npm run docs
+npm run doc
 ```
 This command generates the documentation according to the project configuration. See `package.json` and your docs config for the output location (commonly `./docs` or `./swagger`).
 
@@ -45,7 +45,7 @@ This command generates the documentation according to the project configuration.
     ```
     npm start
     ```
-2. Open the generated API docs (if served) or view the files produced by `npm docs`.
+2. Open the generated API docs (if served) or view the files produced by `npm run doc`.
 
 ## Testing
 Run the test suite:
