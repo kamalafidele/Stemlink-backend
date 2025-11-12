@@ -8,7 +8,7 @@ const router = express.Router();
 const jwt = JWTService.verifyToken;
 
 
-router.get('/on-user/:userId', async (req, res) => {
+router.get('/user/:userId', async (req, res) => {
   const { userId } = req.params;
   const reviews = await ReviewService.getByRevieweeId(userId);
   const avg = await ReviewService.getAverageRating(userId);

@@ -6,7 +6,7 @@ const JWTService = require('../../services/JWTService');
 const router = express.Router();
 const jwt = JWTService.verifyToken;
 
-router.get('/students', jwt, async (req, res) => {
+router.get('/get-all', jwt, async (req, res) => {
   const { skip = 0, limit = 10 } = req.query;
   const students = await StudentProfileService.getAllWithPagination(parseInt(skip), parseInt(limit));
   return res.status(200).json({ students });

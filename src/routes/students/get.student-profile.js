@@ -6,7 +6,7 @@ const JWTService = require('../../services/JWTService');
 const router = express.Router();
 const jwt = JWTService.verifyToken;
 
-router.get('/student/profile', jwt, async (req, res) => {
+router.get('/profile', jwt, async (req, res) => {
   const { _id: userId } = req.user;
   const profile = await StudentProfileService.getByUserId(userId);
   if (!profile) return res.status(404).json({ error: 'Student profile not found' });

@@ -7,7 +7,7 @@ const router = express.Router();
 const jwt = JWTService.verifyToken;
 
 router.put(
-  '/student/profile',
+  '/profile',
   jwt,
   [
     check('bio').optional().isString(),
