@@ -1,6 +1,7 @@
 const express = require('express');
 const JWTService = require('../../services/JWTService');
 const { check, validationResult } = require('express-validator');
+const MentorProfileService = require('../../services/MentorProfileService');
 
 const jwt = JWTService.verifyToken;
 

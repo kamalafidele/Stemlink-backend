@@ -4,7 +4,7 @@ const MentorProfileService = require('../../services/MentorProfileService');
 
 const router = express.Router();
 
-router.get('/:id', async (req, res) => {
+router.get('/by-id/:id', async (req, res) => {
   const { id } = req.params;
   const mentor = await MentorProfileService.getById(id);
   if (!mentor) return res.status(404).json({ error: 'Mentor not found' });
