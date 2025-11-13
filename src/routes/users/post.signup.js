@@ -35,8 +35,8 @@ router.post(
         email: mail,
         password,
         verificationCode,
-        isRegisterComplete: false,
-        isActive: false,
+        isRegisterComplete: true,
+        isActive: true,
         role,
         phoneNumber,
         preferredLanguage: 'ENGLISH'
@@ -48,8 +48,8 @@ router.post(
         verificationCode,
       });
 
-      const result = await EmailService.sendEmail(user.email, subject, html);
-      console.log("Email sent: ", result);
+      // const result = await EmailService.sendEmail(user.email, subject, html);
+      // console.log("Email sent: ", result);
 
       return res.status(200).json({ status: 'registered succefully' });
     } catch (e) {
