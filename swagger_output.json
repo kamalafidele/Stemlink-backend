@@ -169,7 +169,7 @@
         }
       }
     },
-    "/mentors/{id}": {
+    "/mentors/by-id/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -231,7 +231,7 @@
         }
       }
     },
-    "/students/students": {
+    "/students/get-all": {
       "get": {
         "description": "",
         "parameters": [
@@ -253,7 +253,7 @@
         }
       }
     },
-    "/students/student/profile": {
+    "/students/profile": {
       "get": {
         "description": "",
         "parameters": [],
@@ -280,9 +280,7 @@
             "description": "Not Found"
           }
         }
-      }
-    },
-    "/students/profile": {
+      },
       "post": {
         "description": "",
         "parameters": [],
@@ -343,7 +341,7 @@
         }
       }
     },
-    "/reviews/on-user/{userId}": {
+    "/reviews/user/{userId}": {
       "get": {
         "description": "",
         "parameters": [
@@ -361,7 +359,7 @@
         }
       }
     },
-    "/mentorship-relationships/my-mentorships": {
+    "/mentorships/my-mentorships": {
       "get": {
         "description": "",
         "parameters": [],
@@ -375,7 +373,7 @@
         }
       }
     },
-    "/mentorship-relationships/send-request": {
+    "/mentorships/send-request": {
       "post": {
         "description": "",
         "parameters": [
@@ -402,7 +400,7 @@
         }
       }
     },
-    "/mentorship-relationships/{id}/end": {
+    "/mentorships/{id}/end": {
       "post": {
         "description": "",
         "parameters": [
@@ -429,7 +427,7 @@
         }
       }
     },
-    "/mentorship-relationships/accept-mentorship-request": {
+    "/mentorships/accept-mentorship-request": {
       "post": {
         "description": "",
         "parameters": [
