@@ -20,6 +20,7 @@ class JWTService {
 
   // eslint-disable-next-line consistent-return
   static async verifyToken(req, res, next) {
+    try {
     const token = JWTService.getToken(req);
 
     if (token) {
@@ -28,6 +29,9 @@ class JWTService {
       next();
     } else {
       return res.status(400).json({ status: 'No token provided' });
+    }
+    } catch (err) {
+      return res.status(401).json({ status: 'Invalid token' });
     }
   }
 }
