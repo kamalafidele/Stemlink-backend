@@ -2,7 +2,7 @@ const express = require('express');
 const { check, validationResult } = require('express-validator');
 const { v4: uuid } = require('uuid');
 const UserService = require('../../services/UserService');
-const EmailService = require('../../services/EmailService');
+// const EmailService = require('../../services/EmailService');
 
 const router = express.Router();
 const { STEMLINK_EMAIL } = process.env;
@@ -42,11 +42,11 @@ router.post(
         preferredLanguage: 'ENGLISH'
       });
 
-      const subject = 'Email verification with StemLink';
-      const html = EmailService.generateWelcomeEmailHtml({
-        name: firstName + lastName,
-        verificationCode,
-      });
+      // const subject = 'Email verification with StemLink';
+      // const html = EmailService.generateWelcomeEmailHtml({
+      //   name: firstName + lastName,
+      //   verificationCode,
+      // });
 
       // const result = await EmailService.sendEmail(user.email, subject, html);
       // console.log("Email sent: ", result);
