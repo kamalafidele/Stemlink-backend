@@ -33,6 +33,14 @@ class MentorProfileService {
     return MentorProfileRepo.updateByUserId(userId, data);
   }
 
+  static async getByStemFields(stemFields, skip = 0, limit = 10) {
+    return MentorProfileRepo.findByStemFields(stemFields, skip, limit);
+  }
+
+  static async getByProfileIdIn(profileIds) {
+    return MentorProfileRepo.findByProfileIdIn(profileIds);
+  }
+  
   static async deleteById(profileId) {
     return MentorProfileRepo.deleteById(profileId);
   }
