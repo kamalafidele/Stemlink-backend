@@ -41,9 +41,11 @@ router.get('/matching-recommendations', jwt, async (req, res) => {
 
     let recommendations;
     try {
+      console.log('AI Response:', aiResponse);
       const parsedResponse = JSON.parse(aiResponse);
         recommendations = parsedResponse.recommendations;
     } catch (error) {
+      console.error('Error parsing AI response:', error);
       return res.status(500).json({ error: 'Error parsing AI response' });
     }
 

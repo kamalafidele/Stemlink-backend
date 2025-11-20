@@ -24,7 +24,8 @@ Student Profile:
 ${JSON.stringify(studentProfile, null, 2)} 
 Mentor Profiles:
 ${JSON.stringify(recommendedMentors, null, 2)}
-Please return the ids of the recommended mentors in a JSON array: { recommendations: [mentorId1, mentorId2, ...] }.
+Please return the ids of the recommended mentors in this format of a JSON array: { recommendations: [mentorId1, mentorId2, ...] }.
+Again, only return the JSON object without any additional text.
 `;
         const response = await openai.chat.completions.create({
             model: 'gpt-4',

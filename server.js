@@ -48,6 +48,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+// Logger
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 app.use('/api/v1/', routeHandler);
 
 app.use((req, res) => res.status(404).json({ error: 'We cannot get what you are looking for!' }));
