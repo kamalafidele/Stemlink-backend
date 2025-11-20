@@ -41,6 +41,17 @@ class MentorProfileRepo {
     ).exec();
   }
 
+  static async findByStemFields(stemFields, skip = 0, limit = 10) {
+    return MentorProfileModel.find({
+      stemFields: { $in: stemFields.map(field => new RegExp(`^${field}$`, 'i')) }
+    }).skip(skip).limit(limit).populate('user').exec();
+  }
+
+  static async findByProfileIdIn(profileIds) {
+    return MentorProfileModel.find({ _id: { $in: profileIds } }).populate('user').exec();
+  }
+  
+
   static async updateByUserId(userId, data) {
     return MentorProfileModel.findOneAndUpdate(
       { user: userId },
