@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const swaggerUi = require('swagger-ui-express');
 const routeHandler = require('./src/routes');
 const swaggerFile = require('./swagger_output.json');
+const journeyTrackerRoutes = require('./src/routes/journeyTracker');
 
 const app = express();
 
@@ -56,3 +57,5 @@ app.listen(PORT, () => {
   console.log(`APP RUNNING ON ${HOST}:${PORT}`);
   console.log(`ACCESS API DOCS VIA ${HOST}:${PORT}/api-docs `);
 });
+
+app.use('/api/v1/journey-tracker', journeyTrackerRoutes);
